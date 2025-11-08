@@ -12,8 +12,8 @@ const Header = () => {
         height="44"
       />
       <div className="header-actions">
-        <Button />
-        <Button />
+        <Button>Add</Button>
+        <Button>Sign in</Button>
       </div>
     </header>
   )
