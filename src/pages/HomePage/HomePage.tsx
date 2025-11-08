@@ -69,7 +69,7 @@ const HomePage = () => {
   return (
     <main className="home-page">
       {cards.map((card) => (
-        <QuestionCard key={card.id} level={card.level} completed={card.completed} question={card.question} answer={card.answer} />
+        <QuestionCard key={card.id} id={card.id} level={card.level} completed={card.completed} question={card.question} answer={card.answer} />
       ))}
     </main>
   )
