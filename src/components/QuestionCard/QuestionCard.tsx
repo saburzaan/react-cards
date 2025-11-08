@@ -1,28 +1,41 @@
 import './QuestionCard.css'
 import Button from '../Button'
+import { useNavigate } from 'react-router-dom'
 
-const QuestionCard = () => {
+const QuestionCard = (props) => {
+  const {
+    level,
+    completed,
+    question,
+    answer,
+  } = props
+
+  const navigate = useNavigate()
+
   return (
     <article className="question-card">
       <header className="tag-group">
         <p className="tag-level">
-          <strong>Level:</strong> 1
+          <strong>Level:</strong> {level}
         </p>
-        <p className="tag-status">Not Completed</p>
+        <p className="tag-status">{completed ? 'Completed' : 'Not Completed'}</p>
       </header>
 
-      <h2 className="title">Что такое JSX?</h2>
+      <h2 className="title">{question}</h2>
 
       <section className="short-answer">
         <h3 className="label">Short answer:</h3>
-        <p className="answer">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, sequi.
-        </p>
+        <p className="answer">{answer}</p>
       </section>
 
       <footer>
-        <Button onClick={() => {
-        }}>View</Button>
+        <Button
+          onClick={() => {
+            navigate(`/questions/${question}`)
+          }}
+        >
+          View
+        </Button>
       </footer>
     </article>
   )

@@ -10,6 +10,7 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/add-question" element={<div>add question</div>} />
+          <Route path="/question/:id" element={<div>question page</div>} />
         </Route>
       </Routes>
     </BrowserRouter>
