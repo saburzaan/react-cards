@@ -2,14 +2,15 @@ import './QuestionCard.css'
 import Button from '../Button'
 import { useNavigate } from 'react-router-dom'
 
-const QuestionCard = (props) => {
-  const {
-    level,
-    completed,
-    question,
-    answer,
-  } = props
+type QuestionCardProps = {
+  id: string
+  level: number
+  completed: boolean
+  question: string
+  answer: string
+}
 
+const QuestionCard = ({ id, level, completed, question, answer }: QuestionCardProps) => {
   const navigate = useNavigate()
 
   return (
@@ -29,13 +30,7 @@ const QuestionCard = (props) => {
       </section>
 
       <footer>
-        <Button
-          onClick={() => {
-            navigate(`/questions/${question}`)
-          }}
-        >
-          View
-        </Button>
+        <Button onClick={() => navigate(`/questions/${id}`)}>View</Button>
       </footer>
     </article>
   )
