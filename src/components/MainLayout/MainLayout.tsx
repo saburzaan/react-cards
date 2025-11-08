@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import './MainLayout.css'
 
 const MainLayout = () => {
@@ -5,7 +6,9 @@ const MainLayout = () => {
     <div className="main-layout">
       <header>header</header>
       <div className="main-wrapper">
-        <main className="main">main</main>
+        <main className="main">
+          <Outlet />
+        </main>
         <footer className="footer">
           <p>
             React Question Cards Application | {new Date().getFullYear()} <br />
