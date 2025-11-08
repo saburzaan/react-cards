@@ -1,0 +1,22 @@
+.home-page {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--color-background);
+  transition: background-color var(--transition-base);
+}
+
+@media (max-width: 600px) {
+  .home-page {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+
+.home-page .question-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
