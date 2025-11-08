@@ -1,0 +1,43 @@
+.not-found {
+  height: calc(100dvh - 190px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+  text-align: center;
+  gap: 20px;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.not-found-title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.not-found-text {
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  max-width: 420px;
+}
+
+@media (max-width: 600px) {
+  .not-found-title {
+    font-size: 3.5rem;
+  }
+
+  .not-found-text {
+    font-size: 1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .not-found {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-dark);
+  }
+}
