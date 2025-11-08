@@ -34,10 +34,3 @@
     font-size: 1rem;
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .not-found {
-    background-color: var(--color-background-dark);
-    color: var(--color-text-dark);
-  }
-}
