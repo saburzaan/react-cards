@@ -1,0 +1,27 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.button:hover,
+.button.is-active {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
