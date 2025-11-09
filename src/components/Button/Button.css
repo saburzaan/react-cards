@@ -7,7 +7,7 @@
   border: 1px solid currentColor;
   border-radius: 0.5rem;
   background-color: transparent;
-  color: var(--color-primary);
+  color: #61dafb;
   cursor: pointer;
   transition:
     background-color var(--transition-base),
@@ -17,7 +17,7 @@
 
 .button:hover,
 .button.is-active {
-  background-color: var(--color-primary);
+  background-color: #61dafb;
   color: var(--color-background);
 }
 
