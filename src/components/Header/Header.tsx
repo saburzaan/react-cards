@@ -12,8 +12,8 @@ const Header = () => {
         onClick={() => navigate('/')}
         src={Logo}
         alt="React Cards Logo"
-        width="44"
-        height="44"
+        width="40"
+        height="40"
       />
       <div className="header-actions">
         <Button onClick={() => navigate('/add-question')}>Add</Button>
