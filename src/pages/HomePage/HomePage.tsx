@@ -2,6 +2,7 @@ import './HomePage.css'
 import { API_URL } from '../../constants'
 import { useEffect, useState } from 'react'
 import QuestionCardList from '../../components/QuestionCardList'
+import Loader from '../../components/Loader'
 
 const HomePage = () => {
 
@@ -24,6 +25,7 @@ const HomePage = () => {
 
   return (
     <>
+      <Loader />
       <QuestionCardList cards={questions} />
     </>
   )
