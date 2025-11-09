@@ -1,10 +1,10 @@
 import './QuestionCardList.css'
 import QuestionCard from '../QuestionCard'
 
-const QuestionCardList = ({ cards }) => {
+const QuestionCardList = (props: any) => {
   return (
     <ul className="question-card-list">
-      {cards.map((card) => (
+      {props.cards.map((card: any) => (
         <QuestionCard
           key={card.id}
           id={card.id}

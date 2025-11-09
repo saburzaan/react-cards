@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { delayFn } from '../helpers/delayFn.ts'
 
-export const useFetch = (callback) => {
+export const useFetch = (callback: any) => {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
 
-  const fetchFn = async (args) => {
+  const fetchFn = async (args: any) => {
     try {
       setIsLoading(true)
       setError('')
@@ -13,12 +13,12 @@ export const useFetch = (callback) => {
 
       return await callback(args)
 
-    } catch (error) {
+    } catch (error: any) {
       setError(error.message)
     } finally {
       setIsLoading(false)
     }
   }
 
-  return [fetchFn, isLoading, error]
+  return [fetchFn, isLoading, error] as const
 }

@@ -29,7 +29,7 @@
   inset: -15px;
   margin: auto;
   background: var(--color-primary);
-  animation: diamondLoader 2s linear infinite;
+  animation: diamondLoader 1s linear infinite;
 }
 @keyframes diamondLoader {
   0%  ,10% {
