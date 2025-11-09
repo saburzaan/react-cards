@@ -1,19 +1,11 @@
 import './HomePage.css'
-import QuestionCard from '../../components/QuestionCard'
 import { API_URL } from '../../constants'
 import { useEffect, useState } from 'react'
-
-interface Question {
-  id: string
-  level: number
-  completed: boolean
-  question: string
-  answer: string
-}
+import QuestionCardList from '../../components/QuestionCardList'
 
 const HomePage = () => {
 
-  const [questions, setQuestions] = useState<Question[]>([])
+  const [questions, setQuestions] = useState([])
 
   const getQuestions = async () => {
     try {
@@ -31,13 +23,9 @@ const HomePage = () => {
   }, [])
 
   return (
-    <main className="home-page">
-      {questions.map((q) => (
-        <QuestionCard key={q.id} id={q.id} level={q.level} completed={q.completed}
-                      question={q.question}
-                      answer={q.answer} />
-      ))}
-    </main>
+    <>
+      <QuestionCardList cards={questions} />
+    </>
   )
 }
 
